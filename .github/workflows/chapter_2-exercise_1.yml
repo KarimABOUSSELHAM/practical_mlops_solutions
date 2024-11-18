@@ -29,9 +29,9 @@ jobs:
                 cd ./chapter_2/exercise_1
                 zip -r ../../function.zip hello.py
                 cd ../../
-            - name: update lambda handler
-              run: | 
-                aws lambda update-function-configuration --function-name lambda-test --handler hello.main
+            #- name: update lambda handler
+            #  run: | 
+            #    aws lambda update-function-configuration --function-name lambda-test --handler hello.main
             - name: Deploy lambda function
               run: |
                   aws lambda update-function-code --function-name lambda-test  --zip-file fileb://function.zip
