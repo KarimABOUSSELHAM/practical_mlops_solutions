@@ -26,7 +26,7 @@ jobs:
                 aws-region: us-east-1
             - name: package lambda function
               run: |
-                zip -r function.zip . -i hello.py
+                zip -r function.zip . -i ./chapter_2/exercise_1/hello.py
             - name: Deploy lambda function
               run: |
                   aws lambda create-function --function-name lambda-hello-world --runtime python3.8 --handler hello.hello  --role arn:aws:iam::891612554765:role/service-role/lambda-hello-world-role-g0m8f4b8 --zip-file fileb://function.zip
