@@ -2,8 +2,8 @@ name: chapter_2 exercise_1 workflow
 
 on:
     push:
-        paths:
-            - 'chapter_2/exercise_1/**'
+        branches:
+            - main
 
 jobs:
     deploy-aws-lambda:
