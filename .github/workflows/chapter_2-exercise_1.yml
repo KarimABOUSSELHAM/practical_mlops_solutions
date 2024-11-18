@@ -26,10 +26,11 @@ jobs:
                 aws-region: us-east-1
             - name: package lambda function
               run: |
-                zip -r function.zip . -i ./chapter_2/exercise_1/hello.py
+                cd ./chapter_2/exercise_1
+                zip -r ../../function.zip hello.py
+                cd ../../
             - name: update lambda handler
-              run: |
-                cd ./chapter_2/exercise_1  
+              run: | 
                 aws lambda update-function-configuration --function-name lambda-test --handler hello.main
             - name: Deploy lambda function
               run: |
