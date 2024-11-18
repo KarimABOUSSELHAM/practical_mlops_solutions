@@ -29,7 +29,7 @@ jobs:
                 zip -r function.zip . -i hello.py
             - name: Deploy lambda function
               run: |
-                  aws lambda create-function --function-name lambda-hello-world --zip-file fileb://function.zip
+                  aws lambda create-function --function-name lambda-hello-world --role arn:aws:iam::891612554765:role/service-role/lambda-hello-world-role-g0m8f4b8 --zip-file fileb://function.zip
 
             - name: Invoke lambda
               run: |
