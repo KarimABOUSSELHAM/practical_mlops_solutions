@@ -26,8 +26,7 @@ jobs:
                 aws-region: us-east-1
             - name: package lambda function
               run: |
-                cd chapter_2/exercise_1
-                zip -r ../../function.zip hello.py
+                zip -j function.zip chapter_2/exercise_1/hello.py
             - name: Deploy lambda function
               run: |
                   aws lambda update-function-code --function-name lambda-hello-world  --zip-file fileb://function.zip
