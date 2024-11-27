@@ -1,7 +1,7 @@
 # Prerequisites for the exercise
 
 - Python 3.7 or later because flask does not support lower versions
-- EB CLI installed. For this purpose you can refer to this [github repository]([https://github.com/aws/aws-elastic-beanstalk-cli-setup)
+- EB CLI installed. For this purpose you can refer to this github [repository]([https://github.com/aws/aws-elastic-beanstalk-cli-setup)
 - Flask application already available. I enclosed the application code in `app.py` under this directory
 
 # Exercise steps to deploy your application with aws elastic-beanstalk
